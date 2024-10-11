@@ -1,6 +1,5 @@
 import React from "react";
 import carta from '../../Imagenes/carta.png'; // Imagen para la parte trasera de la carta
-import heartBackground from '../../Imagenes/PiratasHeart.webp'; // Fondo para los piratas Heart
 import './CharacterCard.css'; // Archivo CSS importado
 const CharacterCard = ({ character }) => {
 
