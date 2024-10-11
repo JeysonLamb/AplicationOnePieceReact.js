@@ -3,11 +3,22 @@ body {
   background-color: #f0f0f0;
   margin: 0;
   padding: 20px;
-}
+  background-image: url("Imagenes/OP\ back.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay; /* Mezcla el color con la imagen */
 
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Capa semitransparente sobre la imagen */
+}
 h1 {
   text-align: center;
-  color: #333;
+  color: #ff7e5f;
 }
 
 ul {
@@ -22,8 +33,9 @@ li {
   background: linear-gradient(135deg, #6d77b6, #4b5dd4);
   border-radius: 10px;
   margin: 15px;
-  padding: 20px;
-  width: 200px; /* Ancho de la carta */
+  padding: 19px;
+  height: 320px;
+  width: 225px; /* Ancho de la carta */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s; /* Efecto de hover */
 }
@@ -51,8 +63,8 @@ p {
   text-align: left;
 }
 .card {
-  width: 200px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   perspective: 1000px;
 }
 
@@ -61,15 +73,14 @@ p {
   width: 100%;
   height: 100%;
   transition: transform 0.8s;
-  transform-style: preserve-3d;
+  transform-style: preserve-3d; /* Permite la rotación 3D */
 }
-
 .card:hover .card-inner {
   transform: rotateY(180deg); /* Gira la carta al pasar el mouse */
 }
-
-.card-front,
-.card-back {
+.card-front {
+  overflow: hidden; /* Oculta cualquier desbordamiento del texto */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */  
   position: absolute;
   width: 100%;
   height: 100%;
@@ -77,53 +88,64 @@ p {
 }
 
 .card-back {
-  transform: rotateY(180deg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ccc; 
+  background-color: #ccc;
+  transform: rotateY(
+    180deg
+  ); /* Asegura que la carta de atrás esté rotada inicialmente */
 }
 
 .card-back img {
-  width: 119%; 
-  height: 113%; 
-  object-fit: cover; 
+  width: 119%;
+  height: 115%;
+  object-fit: cover;
 }
 
 .logo {
-  width: 150px; 
-  height: auto; 
+  width: 150px;
+  height: auto;
   display: block;
-  margin: 0 auto; 
-  transition: transform 0.3s; 
+  margin: 0 auto;
+  transition: transform 0.3s;
 }
 
 .logo:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
 .loading {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50vh; 
-  font-size: 34px; 
+  height: 50vh;
+  font-size: 34px;
   color: #333;
 }
 
 .loading .spinner {
-  border: 8px solid #259421; 
-  border-top: 8px solid #000000; 
+  border: 8px solid #259421;
+  border-top: 8px solid #000000;
   border-radius: 50%;
-  width: 50px; 
+  width: 50px;
   height: 50px; /* Alto del spinner */
   animation: spin 1s linear infinite; /* Animación del spinner */
 }
-.charge {  /*este es el p */
-  color: #1b8a37;
-
+.charge {
+  /*este es el p */
+  color: #bec7c0;
 }
+
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
