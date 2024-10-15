@@ -2,6 +2,10 @@
 
 Este proyecto es una aplicación desarrollada en React que muestra información sobre los personajes de One Piece. Se implementaron varios componentes para mejorar la experiencia del usuario.
 
+## Aplicación Desplegada en Netlify
+
+[Visita la sitio aquí](https://capable-tapioca-f1027e.netlify.app)
+
 ## Actulizacion de Funcionalidades
 
 - **Carga de personajes**: Obtiene una lista de personajes mediante una API.
@@ -35,12 +39,6 @@ En esta actualización, se han añadido las siguientes características:
 
 - **Cambio de imágenes**: Al hacer clic en una imagen, esta cambiará a la siguiente en la lista asociada al personaje.
 - **Cambio de texto**: Al hacer clic en el nombre de un personaje, el texto cambiará entre "Tripulación Mugiwara" y el nombre real del personaje.
-
-### Detalles Técnicos
-
-- Se utilizó el hook `useState` para manejar el índice de la imagen actual y el texto mostrado.
-- Se implementaron funciones de evento para gestionar el cambio de imágenes y texto.
-- Se creó un nuevo componente llamado `ChangeImag` para mejorar la organización del código.
 
 ## Instalación
 
