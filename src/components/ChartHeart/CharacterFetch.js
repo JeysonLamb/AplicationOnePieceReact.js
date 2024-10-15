@@ -4,7 +4,7 @@ import CharterImgHeart from "./CharterImgHeart"; // Importa las imágenes de los
 
 const CharacterFetcher = ({ setCharacters }) => {
   //   const [loading, setLoading] = useState(true); // Inicializa el estado de carga
-
+  setCharacters([])
   useEffect(() => {
     const fetchCharacters = async () => {
       const data = await getCharacters();
