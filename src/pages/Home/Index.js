@@ -25,7 +25,7 @@ const Home = () => {
           </button>
         </Link>
         <Link href="/Kid">
-          <button className="Kid  ">
+          <button className="kid1">
             <span> Piratas de Kid</span>
           </button>
         </Link>

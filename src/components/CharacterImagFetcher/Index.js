@@ -7,6 +7,7 @@ const CharacterFetcher = ({ setCharacters, crew }) => {
 
   useEffect(() => {
     const fetchCharacters = async () => {
+      setCharacters([])
       // Busco datos de la cache
       // Metodo getItem. 
       //Su función es recuperar un valor asociado a una clave específica en el almacenamiento local del navegado
@@ -24,6 +25,7 @@ const CharacterFetcher = ({ setCharacters, crew }) => {
       try {
         // Obtiene los datos de la API
         const data = await getCharacters(crew);
+
         const filteredCharacters = data
           .filter(({ name }) => selectImag[name]) 
           .map(({ id, name, age, bounty }) => ({
