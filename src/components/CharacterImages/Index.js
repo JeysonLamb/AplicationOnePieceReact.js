@@ -18,6 +18,13 @@ import $img2 from "../../Imagenes/ImagHeart/JeanBart.png";
 import $img3 from "../../Imagenes/ImagHeart/Shachi.png";
 import $img4 from "../../Imagenes/ImagHeart/Penguin.png";
 
+import image from "../../Imagenes/ImagKid/Kid.png";
+import image1 from "../../Imagenes/ImagKid/Killer.png";
+import image2 from "../../Imagenes/ImagKid/Wire.png";
+import image3 from "../../Imagenes/ImagKid/Heat.png";
+
+
+
 // Corrección en la estructura del objeto, para llamar a las imagenes en un mismo componente
 const characterImagesMugiwara = {
   mugiwara: {
@@ -39,6 +46,12 @@ const characterImagesMugiwara = {
     "Shachi": $img3,
     "Penguin": $img4,
   },
+  kid: {
+    "Eustass Kidd": image,
+    "Killer":image1,
+    "Heat":image2,
+    "Wire":image3
+  }
 };
 
 export default characterImagesMugiwara;
