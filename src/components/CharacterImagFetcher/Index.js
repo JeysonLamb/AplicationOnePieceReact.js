@@ -46,7 +46,7 @@ const CharacterFetcher = ({ setCharacters, crew }) => {
     };
 
     fetchCharacters(); 
-  }, [setCharacters])
+  }, [setCharacters,crew])
   if (loading) {
     return (
       <div className="loading">
@@ -55,6 +55,7 @@ const CharacterFetcher = ({ setCharacters, crew }) => {
       </div>
     );
   }
+  
 };
 
 export default CharacterFetcher;
