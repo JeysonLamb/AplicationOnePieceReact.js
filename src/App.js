@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Route, Switch, Link, Redirect } from "wouter";
-import CharacterCard from "./components/CharacterCard/Index";
+import CharacterCard from "./components/CharacterCard/index";
 import CharacterFetcher from "./components/CharacterImagFetcher/Index";
 import Home from "./pages/Home/Index"; // Importa el componente Home
 import logo from "./Imagenes/Logo.png";
