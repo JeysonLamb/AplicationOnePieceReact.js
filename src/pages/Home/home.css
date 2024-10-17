@@ -1,12 +1,21 @@
 @import "animate.css";
 
-body.home-body {
+.content1{
   background-image: url("../../Imagenes/BackHome.jpg"); /* Ruta a tu imagen de fondo */
   background-size: cover; /* Para que la imagen cubra toda la pantalla */
   background-position: center; /* Para centrar la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   height: 100vh; /* Ocupa toda la altura */
-  width: 100vw; /* Ocupa todo el ancho */
+  width: 100vw; /* Ocupa todo el ancho */ background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay; /* Mezcla el color con la imagen */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Capa semitransparente sobre la imagen */
 }
 .nav-button:hover {
   background-color: #0056b3;
@@ -78,7 +87,8 @@ a {
 .law:active {
   transform: scale(0.9);
 }
-.logoOP {
+.Logo {
+  padding-top: 15px;
   width: 230px;
   height: auto;
   display: block;
@@ -87,4 +97,39 @@ a {
 }
 .animate__animated {
   color: rgb(226, 226, 226);
+}
+
+
+.kid1 {
+  margin-top: 12px;
+  border: 0;
+  background-image: linear-gradient(
+    150deg,
+    rgba(207, 23, 13, 0.8),
+    /* Color naranja */ rgba(121, 23, 6, 0.8),
+    /* Color amarillo */ rgba(237, 88, 88, 0.789) /* Color negro */
+  );
+  border-radius: 8px;
+  color: #ffffff;
+  display: flex;
+  font-size: 18px;
+  padding: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding-left: 10px;
+}
+.kid1 span {
+  font-weight: bold;
+  background-color: #312925;
+  padding: 16px 24px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.kid1:hover span {
+  color: #ea3a09;
+}
+
+.kid1:active {
+  transform: scale(0.9);
 }
