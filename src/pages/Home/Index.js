@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { Link } from "wouter";
 import logoOp from "../../Imagenes/LogoOp.png";
-import "./home.css";
+import "./home.css"
 import "animate.css";
 
 const Home = () => {
   return (
-    <div>
+    <div className="content1">
       <Link to="/">
-        <img className="logoOP" src={logoOp} alt="logo" />
+        <img className="Logo" src={logoOp} alt="logo" />
       </Link>
       <h1 className="animate__animated animate__zoomInDown">
         Bienvenido a la Tripulación
@@ -22,6 +22,11 @@ const Home = () => {
         <Link href="/heart">
           <button className="law">
             <span> Piratas Corazon</span>
+          </button>
+        </Link>
+        <Link href="/Kid">
+          <button className="Kid  ">
+            <span> Piratas de Kid</span>
           </button>
         </Link>
       </nav>
