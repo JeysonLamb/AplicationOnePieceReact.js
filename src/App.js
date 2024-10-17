@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { Route, Switch, Link, Redirect } from "wouter";
-import CharacterCard from "./components/ChartMugiwara/ChartersCard";
-import CharacterFetcher from "./components/ChartMugiwara/CharacterFetcher";
-import CharacterFetch from "./components/ChartHeart/CharacterFetch";
-import Home from "./pages/Home"; // Importa el componente Home
+import CharacterCard from "./components/CharacterCard/Index";
+import CharacterFetcher from "./components/CharacterImagFetcher/Index";
+import Home from "./pages/Home/Index"; // Importa el componente Home
 import logo from "./Imagenes/Logo.png";
 import logoHeart from "./Imagenes/LogoHeart.png";
 import "./App.css";
-import "./components/ChartHeart/heart.css";
+import "./components/CharacterImagFetcher/style.css";
 const App = () => {
   const [characters, setCharacters] = useState([]);
 
@@ -28,7 +27,7 @@ const App = () => {
             <h1>
               <strong>Tripulación Mugiwara</strong>
             </h1>
-            <CharacterFetcher setCharacters={setCharacters} />
+            <CharacterFetcher setCharacters={setCharacters} crew="mugiwara" />
             <ul>
               {characters.map((char) => (
                 <li key={char.id}>
@@ -40,15 +39,15 @@ const App = () => {
         </Route>
 
         {/* Ruta para ver la tripulación Piratas Heart */}
-        <Route  path="/heart">
+        <Route path="/heart">
           <div className="Heart ">
             <Link to="/">
               <img className="logo" src={logoHeart} alt="logo" />
             </Link>
             <h1 className="titule">
-              <strong >Piratas Heart</strong>
+              <strong>Piratas Heart</strong>
             </h1>
-            <CharacterFetch setCharacters={setCharacters} />
+            <CharacterFetcher setCharacters={setCharacters} crew="heart" />
             <ul>
               {characters.map((char) => (
                 <li key={char.id}>

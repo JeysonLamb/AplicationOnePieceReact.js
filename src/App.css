@@ -8,7 +8,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: overlay; /* Mezcla el color con la imagen */
-
   background-color: rgba(
     0,
     0,
@@ -80,7 +79,7 @@ p {
 }
 .card-front {
   overflow: hidden; /* Oculta cualquier desbordamiento del texto */
-  white-space: nowrap; /* Evita que el texto se divida en varias líneas */  
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
   position: absolute;
   width: 100%;
   height: 100%;
