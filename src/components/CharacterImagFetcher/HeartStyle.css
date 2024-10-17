@@ -1,0 +1,58 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x:hidden ;
+}
+
+.Heart {
+  margin: 0;
+  padding: 20px;
+  background-image: url("../../Imagenes/PiratasHeart.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100vw;
+  scrollbar-gutter: stable; /* Reserva espacio para la scrollbar, incluso si no se muestra */
+
+}
+.titule {
+  color: rgb(243, 212, 126);
+}
+/* Estilos para la barra de desplazamiento (scrollbar) */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1); /* Color de fondo de la pista */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilo del "thumb", la parte que se arrastra de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color del thumb */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 2px solid transparent; /* Un pequeño borde transparente */
+  background-clip: content-box; /* Hace que el borde se vea mejor */
+}
+
+/* Cambia el color del thumb cuando pasas el ratón sobre él */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color cuando está en hover */
+}
+
+/* Cambia el color de la barra cuando está activa (mientras arrastras) */
+::-webkit-scrollbar-thumb:active {
+  background-color: #333;
+}
+
+/* Opcional: Cambiar el color de la pista en hover */
+::-webkit-scrollbar-track:hover {
+  background: rgba(0, 0, 0, 0.2); /* Fondo más oscuro al pasar el mouse */
+}
