@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { Link } from "wouter";
 import logoOp from "../../Imagenes/LogoOp.png";
 import "./home.css"
