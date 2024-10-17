@@ -6,7 +6,10 @@ import Home from "./pages/Home/Index"; // Importa el componente Home
 import logo from "./Imagenes/Logo.png";
 import logoHeart from "./Imagenes/LogoHeart.png";
 import "./App.css";
-import "./components/CharacterImagFetcher/style.css";
+import "./components/CharacterImagFetcher/HeartStyle.css";
+import "./components/CharacterImagFetcher/KidStyle.css";
+
+import logoKid from "./Imagenes/ImagKid/logoKid.png";
 const App = () => {
   const [characters, setCharacters] = useState([]);
 
@@ -48,6 +51,25 @@ const App = () => {
               <strong>Piratas Heart</strong>
             </h1>
             <CharacterFetcher setCharacters={setCharacters} crew="heart" />
+            <ul>
+              {characters.map((char) => (
+                <li key={char.id}>
+                  <CharacterCard character={char} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Route>
+
+        <Route path="/kid">
+          <div className="kid ">
+            <Link to="/">
+              <img className="LogoKid" src={logoKid} alt="logo" />
+            </Link>
+            <h1 className="titule">
+              <strong>Piratas de Kit</strong>
+            </h1>
+            <CharacterFetcher setCharacters={setCharacters} crew="kid" />
             <ul>
               {characters.map((char) => (
                 <li key={char.id}>
