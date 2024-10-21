@@ -8,6 +8,7 @@ function CharacterFetcher({ crew }) {
   const { characters, loading } = useCharacters(crew);
   console.log("-");
 
+  //<---- utilizo operardor ternario.
   return loading ? (
     <div className="loading">
       <div className="spinner"></div>
@@ -18,6 +19,8 @@ function CharacterFetcher({ crew }) {
       {characters.map((char) => (
         <li key={char.id}>
           <CharacterCard character={char} />
+          {/* Utiliza una sola vez el componente carta*/}
+
         </li>
       ))}
     </ul>

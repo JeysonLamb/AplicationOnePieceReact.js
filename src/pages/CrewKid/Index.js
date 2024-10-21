@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
-import CharacterFetcher from "../../components/CharacterImagFetcher/Index"; // Asegúrate de que la ruta sea correcta
-import logoKid from "../../Imagenes/ImagKid/logoKid.png"; // Ajusta la ruta de la imagen
+import CharacterFetcher from "../../components/CharacterImagFetcher/Index"; 
+import logoKid from "../../Imagenes/ImagKid/logoKid.png"; 
 
 const PiratasKid = () => {
   return (
