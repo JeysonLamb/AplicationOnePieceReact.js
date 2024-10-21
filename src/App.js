@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Route, Switch} from "wouter";
-import Home from "./pages/Home/Index"; // Importa el componente Home
-import Mugiwaras from "./pages/CrewMugiwara/Index"; // Importa el componente Mugiwaras
-import PiratasHeart from "./pages/CrewHeart/Index"; // Importa el componente PiratasHeart
-import PiratasKid from "./pages/CrewKid/Index"; // Importa el componente PiratasKid
+import Home from "./pages/Home/Index"; // Importa el page Home
+import Mugiwaras from "./pages/CrewMugiwara/Index"; // Importa el page Mugiwaras
+import PiratasHeart from "./pages/CrewHeart/Index"; // Importa el page PiratasHeart
+import PiratasKid from "./pages/CrewKid/Index"; // Importa el page PiratasKid
 import "./App.css";
 import "./components/CharacterImagFetcher/HeartStyle.css";
 import "./components/CharacterImagFetcher/KidStyle.css";
