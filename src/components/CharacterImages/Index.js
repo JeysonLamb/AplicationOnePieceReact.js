@@ -1,57 +1,55 @@
-//Imagenes CREW MUGIWARAS 
+// Importar imágenes de la tripulación Mugiwara
+import luffy from "../../Imagenes/ImagMugi/Luffy.png";
+import zoro from "../../Imagenes/ImagMugi/Zoro.png";
+import nami from "../../Imagenes/ImagMugi/nami.png";
+import usopp from "../../Imagenes/ImagMugi/Sogeking.png";
+import sanji from "../../Imagenes/ImagMugi/sanji.png";
+import chopper from "../../Imagenes/ImagMugi/Chopper.png";
+import robin from "../../Imagenes/ImagMugi/Nico.png";
+import franky from "../../Imagenes/ImagMugi/Franosuke.png";
+import brook from "../../Imagenes/ImagMugi/Brook.png";
+import jinbe from "../../Imagenes/ImagMugi/Jinbe.png";
 
-import img from "../../Imagenes/ImagMugi/Luffy.png";
-import img1 from "../../Imagenes/ImagMugi/Zoro.png";
-import img2 from "../../Imagenes/ImagMugi/nami.png";
-import img3 from "../../Imagenes/ImagMugi/Sogeking.png";
-import img4 from "../../Imagenes/ImagMugi/sanji.png";
-import img5 from "../../Imagenes/ImagMugi/Chopper.png";
-import img6 from "../../Imagenes/ImagMugi/Nico.png";
-import img7 from "../../Imagenes/ImagMugi/Franosuke.png";
-import img8 from "../../Imagenes/ImagMugi/Brook.png";
-import img9 from "../../Imagenes/ImagMugi/Jinbe.png";
+// Importar imágenes de la tripulación Heart
+import law from "../../Imagenes/ImagHeart/Law.png";
+import bepo from "../../Imagenes/ImagHeart/Bepo.png";
+import jeanBart from "../../Imagenes/ImagHeart/JeanBart.png";
+import shachi from "../../Imagenes/ImagHeart/Shachi.png";
+import penguin from "../../Imagenes/ImagHeart/Penguin.png";
 
-//Imagenes CREW HEART 
-import $img from "../../Imagenes/ImagHeart/Law.png";
-import $img1 from "../../Imagenes/ImagHeart/Bepo.png";
-import $img2 from "../../Imagenes/ImagHeart/JeanBart.png";
-import $img3 from "../../Imagenes/ImagHeart/Shachi.png";
-import $img4 from "../../Imagenes/ImagHeart/Penguin.png";
+// Importar imágenes de la tripulación Kid
+import kid from "../../Imagenes/ImagKid/Kid.png";
+import killer from "../../Imagenes/ImagKid/Killer.png";
+import wire from "../../Imagenes/ImagKid/Wire.png";
+import heat from "../../Imagenes/ImagKid/Heat.png";
 
-import image from "../../Imagenes/ImagKid/Kid.png";
-import image1 from "../../Imagenes/ImagKid/Killer.png";
-import image2 from "../../Imagenes/ImagKid/Wire.png";
-import image3 from "../../Imagenes/ImagKid/Heat.png";
-
-
-
-// Corrección en la estructura del objeto, para llamar a las imagenes en un mismo componente
-const characterImagesMugiwara = {
+// Corrección en la estructura del objeto, para llamar a las imágenes en un mismo componente
+const characterImages = {
   mugiwara: {
-    "Monkey D Luffy": img,
-    "Roronoa Zoro": img1,
-    "Nami": img2,
-    "Usopp": img3,
-    "Sanji": img4,
-    "Tony-Tony Chopper": img5,
-    "Nico Robin": img6,
-    "Franky": img7,
-    "Brook": img8,
-    "Jinbe": img9,
+    "Monkey D Luffy": luffy,
+    "Roronoa Zoro": zoro,
+    "Nami": nami,
+    "Usopp": usopp,
+    "Sanji": sanji,
+    "Tony-Tony Chopper": chopper,
+    "Nico Robin": robin,
+    "Franky": franky,
+    "Brook": brook,
+    "Jinbe": jinbe,
   },
   heart: {
-    "Trafalgar D. Water Law": $img,
-    "Bepo": $img1,
-    "Jean Bart": $img2,
-    "Shachi": $img3,
-    "Penguin": $img4,
+    "Trafalgar D. Water Law": law,
+    "Bepo": bepo,
+    "Jean Bart": jeanBart,
+    "Shachi": shachi,
+    "Penguin": penguin,
   },
   kid: {
-    "Eustass Kidd": image,
-    "Killer":image1,
-    "Heat":image2,
-    "Wire":image3
-  }
+    "Eustass Kidd": kid,
+    "Killer": killer,
+    "Heat": heat,
+    "Wire": wire,
+  },
 };
 
-export default characterImagesMugiwara;
+export default characterImages;
