@@ -4,7 +4,7 @@ Este proyecto es una aplicación desarrollada en React que muestra información 
 
 ## Aplicación Desplegada en Netlify
 
-[Visita la sitio aquí](https://capable-tapioca-f1027e.netlify.app)
+[Visita la sitio aquí](https://opcard.netlify.app/)
 
 ## Actulizacion de Funcionalidades
 
