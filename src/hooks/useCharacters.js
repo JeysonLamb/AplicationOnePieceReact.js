@@ -1,16 +1,15 @@
-
-import { useEffect, useState } from "react";
+import { useEffect, useContext } from "react";
 import getCharacters from "../services/apiService"; 
-import characterImages from "../components/CharacterImages/Index"; 
+import characterImages from "../components/CharacterImages/Index";
+import { GlobalContext } from "../context/GlobalContext"; 
 
 const useCharacters = (crew) => {
-  const [characters, setCharacters] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { setCharacters, setLoading } = useContext(GlobalContext); 
 
   useEffect(() => {
     const fetchCharacters = async () => {
-      setCharacters([]);
-      
+      setLoading(true); // Establece el estado de carga a verdadero
+
       const cachedData = localStorage.getItem(`characters-${crew}`);
       if (cachedData) {
         setCharacters(JSON.parse(cachedData));
@@ -41,9 +40,6 @@ const useCharacters = (crew) => {
     };
 
     fetchCharacters();
-  }, [crew]);
-
-  return { characters, loading };
-
+  }, [crew, setCharacters, setLoading]);
 }
-export default useCharacters
+export default useCharacters;
