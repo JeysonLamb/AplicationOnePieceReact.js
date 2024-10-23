@@ -1,11 +1,9 @@
-import React from "react";
-//<------ HOOK para el llamado de las imagenes y el crew
-import useCharacters from "../../hooks/useCharacters";
-
+import React, { useContext } from "react";
+import { GlobalContext } from "../../context/GlobalContext"; // Importar el contexto global
 import CharacterCard from "../CharacterCard";
 
-function CharacterFetcher({ crew }) {
-  const { characters, loading } = useCharacters(crew);
+function CharacterFetcher() {
+  const { characters, loading } = useContext(GlobalContext); // Acceder al contexto global
   console.log("-");
 
   //<---- utilizo operardor ternario.
@@ -19,8 +17,6 @@ function CharacterFetcher({ crew }) {
       {characters.map((char) => (
         <li key={char.id}>
           <CharacterCard character={char} />
-          {/* Utiliza una sola vez el componente carta*/}
-
         </li>
       ))}
     </ul>
