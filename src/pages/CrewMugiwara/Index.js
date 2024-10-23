@@ -1,9 +1,14 @@
+// ./components/Mugiwaras.js
 import React from "react";
 import { Link } from "wouter";
-import CharacterFetcher from "../../components/CharacterImagFetcher/Index"; // Asegúrate de que la ruta sea correcta
-import logoMugi from "../../Imagenes/Logo.png"
+import CharacterImagFetcher from "../../components/CharacterImagFetcher/Index";
+import logoMugi from "../../Imagenes/Logo.png";
+import useCharacters from "../../hooks/useCharacters";
 
 const Mugiwaras = () => {
+  const crew = "mugiwara"; // Definir el valor de crew
+  useCharacters(crew); // Llamar al hook con el valor de crew
+
   return (
     <div className="Mugiwaras">
       <Link to="/">
@@ -12,7 +17,7 @@ const Mugiwaras = () => {
       <h1>
         <strong>Tripulación Mugiwara</strong>
       </h1>
-      <CharacterFetcher crew="mugiwara" />
+      <CharacterImagFetcher crew={crew} /> {/* Pasar crew a CharacterImagFetcher */}
     </div>
   );
 };
