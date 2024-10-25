@@ -2,7 +2,5 @@
     "compilerOptions": {
         "baseUrl": "src"
     }
-// para no colocar punto al inicio, sino que se comuniquen desde el src
-// ../../ XXX
-// components/CharacterCard por ejemplo
+
 }
