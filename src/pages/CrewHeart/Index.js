@@ -1,23 +1,40 @@
-// ./components/PiratasHeart.js
-import React from "react";
+import React, { lazy, Suspense, useContext } from "react"; // Importar useContext
 import { Link } from "wouter";
-import CharacterImagFetcher from "../../components/CharacterImagFetcher/Index"; 
-import logoCorazon from "../../Imagenes/LogoHeart.png"; 
-import useCharacters from "../../hooks/useCharacters"; // Importar el hook
+import logoCorazon from "Imagenes/LogoHeart.webp";
+import useCharacters from "hooks/useCharacters";
+import NavigationButtons from "components/NavigationButtons/Index";
+import { GlobalContext } from "context/GlobalContext"; // Importar el contexto global
+import "Styles/CrewHeart.css";
+import "Styles/global.css";
+
+const CharacterImagFetcher = lazy(() =>
+  import("../../components/CharacterImagFetcher/Index")
+);
 
 const PiratasHeart = () => {
-  const crew = "heart"; // Definir el valor de crew
-  useCharacters(crew); // Llamar al hook con el valor de crew
+  const crew = "heart"; 
+  const { loading } = useContext(GlobalContext); 
+  useCharacters(crew); 
 
   return (
     <div className="Heart">
       <Link to="/">
-        <img className="logo" src={logoCorazon} alt="logo" />
+        <img className="LogoCrew" src={logoCorazon} alt="logo" />
       </Link>
       <h1 className="titule">
-        <strong>Piratas Corazon</strong>
+        <strong>Piratas Corazón</strong>
       </h1>
-      <CharacterImagFetcher crew={crew} /> {/* Pasar crew a CharacterImagFetcher */}
+      <Suspense fallback={loading}>
+        <CharacterImagFetcher /> 
+      </Suspense>
+      {!loading && (
+        <NavigationButtons
+          prevRoute="/mugi" 
+          prevLabel="Anterior"
+          nextRoute="/kid" 
+          nextLabel="Siguiente"
+        />
+      )}
     </div>
   );
 };

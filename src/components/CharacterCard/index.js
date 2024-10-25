@@ -1,5 +1,5 @@
 import React from "react";
-import carta from '../../Imagenes/carta.png'; // Imagen para la parte trasera de la carta
+import carta from '../../Imagenes/carta.webp'; // Imagen para la parte trasera de la carta
 const CharacterCard = ({ character }) => {
   return (
     <div className="card">

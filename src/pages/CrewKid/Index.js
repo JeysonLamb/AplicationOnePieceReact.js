@@ -1,13 +1,20 @@
-// ./components/PiratasKid.js
-import React from "react";
+import React, { lazy, Suspense, useContext } from "react"; // Importar useContext
 import { Link } from "wouter";
-import CharacterImagFetcher from "../../components/CharacterImagFetcher/Index"; 
-import logoKid from "../../Imagenes/ImagKid/logoKid.png"; 
-import useCharacters from "../../hooks/useCharacters"; // Importar el hook
+import logoKid from "Imagenes/ImagKid/logoKid.webp";
+import useCharacters from "hooks/useCharacters";
+import NavigationButtons from "components/NavigationButtons/Index"; // Importar el componente de navegación
+import { GlobalContext } from "context/GlobalContext"; // Importar el contexto global
+import "Styles/CrewKid.css";
+import "Styles/global.css";
+
+const CharacterImagFetcher = lazy(() =>
+  import("components/CharacterImagFetcher/Index")
+);
 
 const PiratasKid = () => {
-  const crew = "kid"; // Definir el valor de crew
-  useCharacters(crew); // Llamar al hook con el valor de crew
+  const crew = "kid"; 
+  const { loading } = useContext(GlobalContext); // Obtener el estado de loading del contexto global
+  useCharacters(crew); 
 
   return (
     <div className="kid">
@@ -17,7 +24,18 @@ const PiratasKid = () => {
       <h1 className="titule">
         <strong>Piratas de Kid</strong>
       </h1>
-      <CharacterImagFetcher crew={crew} /> {/* Pasar crew a CharacterImagFetcher */}
+      <Suspense fallback={loading}>
+        <CharacterImagFetcher />
+      </Suspense>
+
+      {!loading && (
+        <NavigationButtons
+          prevRoute="/heart" 
+          prevLabel="Anterior"
+          nextRoute="/mugi" 
+          nextLabel="Siguiente" 
+        />
+      )}
     </div>
   );
 };
