@@ -4,7 +4,7 @@ Este proyecto es una aplicación desarrollada en React que muestra información 
 
 ## Aplicación Desplegada en Netlify
 
-[Visita la sitio aquí](https://opcard.netlify.app/)
+[Visita la sitio aquí]([https://opcard.netlify.app/](https://671b3378312af1fb5c4b77a8--opcard.netlify.app/))
 
 ## Actulizacion de Funcionalidades
 
