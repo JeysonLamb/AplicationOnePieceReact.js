@@ -1,7 +1,9 @@
+import React from "react";
 import { Link } from "wouter";
-import logoOp from "../../Imagenes/LogoOp.png";
-import "./home.css"
+import logoOp from "Imagenes/LogoOp.webp";
+import "Styles/home.css";
 import "animate.css";
+import "Styles/global.css";
 
 const Home = () => {
   return (
@@ -14,17 +16,17 @@ const Home = () => {
       </h1>
       <nav>
         <Link href="/mugi">
-          <button className="mugiwa">
+          <button className="buttonMugiwara">
             <span> Piratas de Sombrero de Paja</span>
           </button>
         </Link>
         <Link href="/heart">
-          <button className="law">
+          <button className="buttonLaw">
             <span> Piratas Corazon</span>
           </button>
         </Link>
         <Link href="/Kid">
-          <button className="kid1">
+          <button className="buttonKid">
             <span> Piratas de Kid</span>
           </button>
         </Link>
