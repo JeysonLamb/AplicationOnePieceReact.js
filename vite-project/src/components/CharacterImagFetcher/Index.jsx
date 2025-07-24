@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { GlobalContext } from "context/GlobalContext"; // Importar el contexto global
+import { GlobalContext } from "../../context/GlobalContext"; // Importar el contexto global
 import CharacterCard from "../CharacterCard";
-import NavigationButtons from "components/NavigationButtons/Index"; // Asegúrate de que la ruta sea correcta
+import NavigationButtons from "../NavigationButtons/Index"; // Asegúrate de que la ruta sea correcta
 
 function CharacterFetcher({ prevRoute, nextRoute }) {
   const { characters, loading } = useContext(GlobalContext); // Acceder al contexto global

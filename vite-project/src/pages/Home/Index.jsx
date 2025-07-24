@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "wouter";
-import logoOp from "Imagenes/LogoOp.webp";
-import "Styles/home.css";
-import "animate.css";
-import "Styles/global.css";
+import logoOp from "../../assets/Logo.webp"; 
+import "../../Styles/home.css";
+import "../../Styles/global.css";
 
 const Home = () => {
   return (

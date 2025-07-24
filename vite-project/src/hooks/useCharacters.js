@@ -1,7 +1,7 @@
 import { useEffect, useContext } from "react";
-import getCharacters from "services/apiService"; 
-import characterImages from "components/CharacterImages/Index";
-import { GlobalContext } from "context/GlobalContext"; 
+import getCharacters from "../services/apiService"; 
+import characterImages from "../components/CharacterImages/Index";
+import { GlobalContext } from "../context/GlobalContext"; 
 
 const useCharacters = (crew) => {
   const { setCharacters, setLoading } = useContext(GlobalContext); 

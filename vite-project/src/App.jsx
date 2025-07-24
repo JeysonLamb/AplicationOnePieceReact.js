@@ -1,13 +1,13 @@
 
 import React from "react";
 import { Route} from "wouter";
-import Home from "pages/Home/Index"; 
-import Mugiwaras from "pages/CrewMugiwara/Index"; 
-import PiratasHeart from "pages/CrewHeart/Index"; 
-import PiratasKid from "pages/CrewKid/Index"; 
-import { GlobalProvider } from "context/GlobalContext"; 
-import "Styles/global.css";
-import "Styles/ScrollBar.css"
+import Home from "./pages/Home/Index"; 
+import Mugiwaras from "./pages/CrewMugiwara/Index"; 
+import PiratasHeart from "./pages/CrewHeart/Index"; 
+import PiratasKid from "./pages/CrewKid/Index"; 
+import { GlobalProvider } from "./context/GlobalContext"; 
+import "./Styles/global.css";
+import "./Styles/ScrollBar.css"
 const App = () => {
   return (
     <GlobalProvider>
