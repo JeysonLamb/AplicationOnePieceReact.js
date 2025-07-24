@@ -1,14 +1,14 @@
 import React, { lazy, Suspense, useContext } from "react"; // Importar useContext
 import { Link } from "wouter";
-import logoKid from "Imagenes/ImagKid/logoKid.webp";
-import useCharacters from "hooks/useCharacters";
-import NavigationButtons from "components/NavigationButtons/Index"; // Importar el componente de navegación
-import { GlobalContext } from "context/GlobalContext"; // Importar el contexto global
-import "Styles/CrewKid.css";
-import "Styles/global.css";
+import logoKid from "../../assets/ImagKid/LogoKid.webp"; 
+import useCharacters from "../../hooks/useCharacters";
+import NavigationButtons from "../../components/NavigationButtons/Index"; 
+import { GlobalContext } from "../../context/GlobalContext";  
+import "../../Styles/CrewKid.css";
+import "../../Styles/global.css";
 
 const CharacterImagFetcher = lazy(() =>
-  import("components/CharacterImagFetcher/Index")
+  import("../../components/CharacterImagFetcher/Index")
 );
 
 const PiratasKid = () => {

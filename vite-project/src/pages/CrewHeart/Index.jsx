@@ -1,11 +1,11 @@
 import React, { lazy, Suspense, useContext } from "react"; // Importar useContext
 import { Link } from "wouter";
-import logoCorazon from "Imagenes/LogoHeart.webp";
-import useCharacters from "hooks/useCharacters";
-import NavigationButtons from "components/NavigationButtons/Index";
-import { GlobalContext } from "context/GlobalContext"; // Importar el contexto global
-import "Styles/CrewHeart.css";
-import "Styles/global.css";
+import logoCorazon from "../../assets/LogoHeart.webp";
+import useCharacters from "../../hooks/useCharacters";
+import NavigationButtons from "../../components/NavigationButtons/Index";
+import { GlobalContext } from "../../context/GlobalContext"; 
+import "../../Styles/CrewHeart.css";
+import "../../Styles/global.css";
 
 const CharacterImagFetcher = lazy(() =>
   import("../../components/CharacterImagFetcher/Index")

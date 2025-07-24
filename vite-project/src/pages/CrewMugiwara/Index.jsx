@@ -1,15 +1,15 @@
-import React, { lazy, Suspense, useContext } from "react"; // Importar lazy, Suspense y useContext
-import { Link } from "wouter"; // Importar Link de wouter
-import logoMugi from "Imagenes/Logo.webp";
-import useCharacters from "hooks/useCharacters";
-import NavigationButtons from "components/NavigationButtons/Index"; // Importar el componente de navegación
-import { GlobalContext } from "context/GlobalContext"; // Importar el contexto global
-import "Styles/CrewMugiwara.css";
-import "Styles/global.css";
+import React, { lazy, Suspense, useContext } from "react"; 
+import { Link } from "wouter"; 
+import logoMugi from "../../assets/Logo.webp";
+import useCharacters from "../../hooks/useCharacters";
+import NavigationButtons from "../../components/NavigationButtons/Index"; 
+import { GlobalContext } from "../../context/GlobalContext"; 
+import "../../Styles/CrewMugiwara.css";
+import "../../Styles/global.css";
 
 // Cargar CharacterFetcher de manera diferida
 const CharacterFetcher = lazy(() =>
-  import("components/CharacterImagFetcher/Index")
+  import("../../components/CharacterImagFetcher/Index")
 );
 
 const Mugiwaras = () => {
